@@ -46,7 +46,7 @@ export default {};
 </script>
 <style lang="scss" scoped>
 .howitworks_wrapper {
-  height: 450px;
+  min-height: 450px;
   width: 90%;
   margin: 2em auto;
   display: flex;
@@ -94,6 +94,26 @@ export default {};
         p {
           color: #777;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .section1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .section-subheader {
+      width: 50% !important;
+    }
+  }
+  .section2 {
+    .step-group {
+      // border: solid 2px blue;
+      width: 75% !important;
+      .step-group-right {
+        width: 100% !important;
       }
     }
   }

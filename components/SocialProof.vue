@@ -41,4 +41,34 @@ export default {};
     }
   }
 }
+
+@media screen and (max-width: 1050px) {
+  .social-proof-block {
+    .social-proof-img {
+      width: 75% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .social_proof_wrapper {
+    padding: 0 2em;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    &::-webkit-scrollbar-thumb {
+      background: rgb(30, 146, 112);
+      border-radius: 8px;
+      height: 4px;
+      width: 4px;
+    }
+    &::-webkit-scrollbar {
+      background: rgb(214, 213, 213);
+      height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      height: 4px;
+    }
+  }
+}
 </style>

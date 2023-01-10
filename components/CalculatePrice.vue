@@ -137,7 +137,7 @@ export default {};
 </script>
 <style lang="scss" scoped>
 .calculate_price_wrapper {
-  height: 800px;
+  min-height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,7 +148,7 @@ export default {};
     width: 75%;
     border-radius: 16px;
     display: flex;
-    padding: 4em 7em;
+    padding: 4em 4em;
     overflow: hidden;
     .inside_wrapper_left {
       display: flex;
@@ -236,6 +236,26 @@ export default {};
             background-color: rgb(30, 146, 112);
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .calculate_price_wrapper {
+    .inside_wrapper {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 4em 2em !important;
+      .inside_wrapper_left {
+        width: 100%;
+        p {
+          width: 100% !important;
+        }
+      }
+      .inside_wrapper_right {
+        width: 100%;
       }
     }
   }

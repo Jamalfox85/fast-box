@@ -20,7 +20,18 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      menuOpen: true,
+    };
+  },
+  methods: {
+    toggleMobileMenu() {
+      this.menuOpen = !this.menuOpen;
+    },
+  },
+};
 </script>
 <style lang="scss">
 .nav_wrapper {
@@ -59,6 +70,34 @@ export default {};
       }
     }
   }
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+    background-color: rgb(60, 189, 150);
+    img {
+      width: 1.5em;
+    }
+    .mobile-main {
+      top: 0;
+      right: 0;
+      height: 100vh;
+      padding: 2em 4em;
+      display: none;
+      .mobile-open-icon {
+        z-index: 4;
+        width: 1.5em;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+      }
+      .mobile-nav-links {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+    }
+  }
 
   /* Decorative Images */
   .nav-blob {
@@ -68,6 +107,27 @@ export default {};
     left: 2em;
     transform: rotate(290deg) scale(2);
     z-index: -1;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav_wrapper {
+    flex-wrap: wrap;
+
+    .nav_logo {
+      width: 50%;
+      order: 1;
+    }
+    .nav_links {
+      justify-content: space-between !important;
+      width: 100%;
+      order: 3;
+    }
+    .nav_ctas {
+      justify-content: flex-end;
+      width: 50%;
+      order: 2;
+    }
   }
 }
 </style>

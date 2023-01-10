@@ -66,17 +66,20 @@ export default {};
 </script>
 <style lang="scss">
 .howitworks_wrapper {
-  height: 450px;
+  min-height: 450px;
   width: 90%;
   margin: 2em auto 4em auto;
   display: flex;
   flex-direction: column;
   position: relative;
+  z-index: 2;
   .section1 {
     display: flex;
     justify-content: center;
     width: 100%;
     margin: 2em 0;
+    position: relative;
+    z-index: 2;
     & > * {
       margin: 0 2em;
     }
@@ -139,6 +142,34 @@ export default {};
     bottom: -2em;
     left: 2em;
     width: 3em;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .section2 {
+    flex-wrap: wrap;
+    .step-group {
+      width: 50%;
+    }
+  }
+  .hiw-green-star {
+    opacity: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section1 {
+    flex-direction: column;
+    align-items: center;
+    .section-subheader {
+      width: 80% !important;
+      text-align: center;
+    }
+  }
+  .section2 {
+    .step-group {
+      width: 100%;
+    }
   }
 }
 </style>

@@ -85,7 +85,7 @@ export default {};
         margin: 0;
         padding: 0 2em;
         font-size: 0.75em;
-        min-width: 300px;
+        width: 300px;
         background-color: rgb(226, 245, 239);
         border-radius: 8px 0 0 8px;
         &:focus {
@@ -137,6 +137,47 @@ export default {};
     opacity: 0.5;
     z-index: -2;
     width: 50vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero_wrapper {
+    flex-direction: column;
+    .hero-left {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 2em;
+      align-items: center;
+      text-align: center;
+      .tracking-input-group {
+        .tracking-input {
+          width: 70vw;
+        }
+      }
+    }
+    .hero-right {
+      width: 100%;
+      .hero-img {
+        position: relative;
+        width: 100%;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  .hero-globe {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero_wrapper {
+    .hero-left {
+      .hero-main-text {
+        font-size: 3em;
+      }
+    }
   }
 }
 </style>

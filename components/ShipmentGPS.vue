@@ -26,7 +26,7 @@
 <script>
 export default {};
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .network_wrapper {
   display: flex;
   flex-direction: row-reverse;
@@ -79,6 +79,26 @@ export default {};
     width: 4em;
     top: 0;
     left: 12em;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .network_wrapper {
+    .network_left {
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.5;
+      .network-img {
+        left: 0;
+        top: 0;
+      }
+    }
+    .network_right {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
   }
 }
 </style>

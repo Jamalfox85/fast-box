@@ -53,7 +53,9 @@ export default {};
     width: 45%;
     margin: auto;
     padding: 1em;
-    height: 500px;
+    // min-height: 500px;
+    position: relative;
+    z-index: 2;
     .network-header {
       font-size: 3em;
       color: rgb(58, 86, 83);
@@ -93,6 +95,35 @@ export default {};
     right: -32em;
     width: 800px;
     opacity: 75%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .network_wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    .network_left {
+      width: 90%;
+      .network-img {
+        left: 0;
+      }
+    }
+    .network_right {
+      width: 90%;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2em;
+      .network-text {
+        width: 100%;
+      }
+    }
+  }
+  .network-rectangle {
+    left: 0 !important;
+    width: 100%;
+  }
+  .blob2 {
+    display: none;
   }
 }
 </style>
